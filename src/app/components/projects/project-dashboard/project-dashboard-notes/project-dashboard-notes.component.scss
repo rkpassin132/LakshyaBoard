@@ -1,0 +1,6 @@
+.project-dashboard-notes-container{
+    padding: 20px;
+    ::ng-deep .ck-editor__editable_inline {
+        min-height: 200px;
+    }
+}

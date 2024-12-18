@@ -1,0 +1,23 @@
+.user-layout-container {
+    height: 100vh;
+  
+    .example-sidenav {
+      background-color: #f4f6f8;
+      border-right: 1px solid #ddd;
+      transition: width 0.3s ease;
+      overflow: hidden; // Hide content when collapsed
+    }
+  
+    .withoutDrawer {
+      width: 80px;
+    }
+    .upper-content {
+      display: flex;
+      flex-direction: row;
+      .main-container {
+        height: 100vh;
+        flex-grow: 1;
+      }
+    }
+  }
+  

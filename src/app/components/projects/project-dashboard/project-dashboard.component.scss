@@ -1,0 +1,13 @@
+@import '../../../../variables';
+
+.project-dashboard-container {
+    width: 100%;
+    height: calc(100vh - 82px);
+
+    ::ng-deep{
+        .mat-mdc-tab-labels{
+            background-color: white;
+            border-bottom: 1px solid $border;
+        }
+    }
+}

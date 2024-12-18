@@ -1,0 +1,30 @@
+@import "../../../../../../variables";
+
+.task-item-container {
+  mat-card-header {
+    justify-content: space-between;
+  }
+  mat-card-content{
+    padding: 5px 16px;
+  }
+  mat-card-actions {
+    border-top: 1px solid $border;
+  }
+  .footer-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0px 10px;
+    font-size: 14px;
+    color: #727272;
+  }
+  .badge-list{
+    gap: 10px;
+    .badge{
+        padding: 8px 12px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+  }
+}

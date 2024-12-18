@@ -1,0 +1,15 @@
+<div class="project-dashboard-notes-container">
+    <mat-card appearance="outlined">
+        <mat-card-content>
+            <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+                <ckeditor formControlName="description" [editor]="Editor" [config]="configEditor" data=""></ckeditor>
+                <button mdbRipple type="submit" [disabled]="!taskForm.valid || loading"
+                    class="btn btn-primary btn-block mb-4 mt-4">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status"
+                        aria-hidden="true"></span>
+                    Save
+                </button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

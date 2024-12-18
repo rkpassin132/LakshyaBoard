@@ -1,0 +1,22 @@
+<div class="project-item-container" [ngClass]="{'active': active}">
+    <div class="left-item">
+        <div class="project-logo">
+            <mat-icon>language</mat-icon>
+        </div>
+        <h4>Piper Enterpirise</h4>
+    </div>
+    <div class="right-item">
+        <mat-icon mat-icon-button [matMenuTriggerFor]="menu" class="cursor-pointer">more_vert</mat-icon>
+    </div>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>delete</mat-icon>
+            <span>Delete</span>
+        </button>
+        <hr class="m-0" />
+        <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+            <span>Setting</span>
+        </button>
+    </mat-menu>
+</div>

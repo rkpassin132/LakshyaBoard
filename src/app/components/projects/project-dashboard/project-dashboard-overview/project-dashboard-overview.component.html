@@ -1,0 +1,22 @@
+<div class="project-dashboard-overview-container">
+    <div class="row">
+        <div class="col-sm-6 activity-section">
+            <mat-card appearance="outlined">
+                <mat-card-content>
+                    <h3>Task Status</h3>
+                    <canvas baseChart [labels]="doughnutChartLabels" [datasets]="doughnutChartDatasets"
+                        [options]="doughnutChartOptions" [legend]="true" [type]="'doughnut'">
+                    </canvas>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-6">
+            <mat-card appearance="outlined">
+                <mat-card-content>
+                    <h3>Recent Updates</h3>
+                    
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.project-dashboard-overview-container{
+    padding: 20px;
+    .activity-section{
+        canvas {
+            display: block;
+            width: 100%;
+            max-height: 400px;
+          }
+          
+          .text-center {
+            text-align: center;
+          }
+    }
+}

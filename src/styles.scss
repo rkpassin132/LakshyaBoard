@@ -1,0 +1,127 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+@import "./_variables.scss";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$client-primary: mat.define-palette(mat.$indigo-palette);
+$client-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$client-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$client-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $client-primary,
+      accent: $client-accent,
+      warn: $client-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($client-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/regular.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import "mdb-angular-ui-kit/assets/scss/mdb.scss";
+@import "./datatable.scss";
+
+body {
+  background-color: #e5edf7;
+}
+section {
+  margin: 20px 0px;
+}
+.form-outline {
+  margin-bottom: 18px;
+}
+.input-error {
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 18px;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+p {
+  margin: 0;
+  font-size: 13px;
+  color: #868e99;
+  font-weight: 400;
+}
+h3 {
+  font-size: 18px;
+  color: #040621;
+}
+h4 {
+  color: #0e1d35;
+  font-size: 14px;
+  margin: 0;
+}
+.badge-online {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  content: "";
+  display: inline-block;
+  background: #4caf50;
+  border-radius: 50%;
+}
+.icon-btn {
+  padding: 5px;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.icon-btn:hover {
+  background-color: $border;
+}
+.user-round {
+  width: 38px;
+  height: 38px;
+}
+::ng-deep {
+  .mat-mdc-menu-content {
+    padding: 0 !important;
+  }
+}
+.btn {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 17px;
+  box-shadow: none;
+  letter-spacing: 0.5px;
+}
+.btn:hover{
+     box-shadow: none;
+}

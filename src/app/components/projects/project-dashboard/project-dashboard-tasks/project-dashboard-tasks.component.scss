@@ -1,0 +1,104 @@
+@import "../../../../../variables";
+
+.project-dashboard-tasks-container {
+  height: calc(100vh - 216px);
+  .board-list {
+    width: calc(100vw - 390px);
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    @include custom-scrollbar(7px);
+
+    .cursor-hand {
+      cursor: grab;
+    }
+
+    .board-item {
+        width: 400px;
+        border: 1px solid #d7d8de;
+        background-color: #f9f9f9;
+        padding: 0 16px;
+        border-radius: 8px;
+
+      .border-color {
+        border-color: $border;
+      }
+
+      .header {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+
+        .left-item,
+        .right-item {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          justify-content: space-around;
+          align-items: center;
+        }
+      }
+      .board-item-card-list {
+        width: 100%;
+        margin-top: 20px;
+        height: calc(100vh - 380px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        @include custom-scrollbar();
+      }
+    }
+  }
+}
+.board-item {
+    width: 400px;
+    border: 1px solid #d7d8de;
+    background-color: #f9f9f9;
+    padding: 0 16px;
+    border-radius: 8px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+
+  .left-item,
+  .right-item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+}
+
+.board-item-card-list {
+    width: 100%;
+    margin-top: 20px;
+    height: calc(100vh - 380px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include custom-scrollbar();
+  }

@@ -1,0 +1,22 @@
+$border: #e9eaef;
+$border_hover: #838489;
+$hoverBackground: #e5ebff;
+
+@mixin custom-scrollbar($width: 5px) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #cacaca;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a4a4a4;
+  }
+}

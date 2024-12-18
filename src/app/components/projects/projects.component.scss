@@ -1,0 +1,49 @@
+@import "../../../variables";
+
+.project-container {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  app-project-dashboard{
+    flex-grow: 1;
+  }
+
+  .side-list-container{
+    padding: 2rem 0.8rem;
+    background: white;
+    border-right: 1px solid $border;
+    width: 250px;
+    margin: 0;
+    height: 85vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include custom-scrollbar();
+
+    .side-list-footer{
+      button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          padding: 6px;
+          width: 100%;
+          border-radius: 5px;
+          border-width: 2px;
+          border-style: dashed;
+          border-color: #365eff;
+          color: #365eff;
+          background: white;
+          font-size: 15px;
+  
+          &:hover{
+              background-color: #e5ebff;
+          }
+      }
+    }
+  }
+}

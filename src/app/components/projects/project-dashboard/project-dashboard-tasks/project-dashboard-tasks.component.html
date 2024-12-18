@@ -1,0 +1,63 @@
+<div class="project-dashboard-tasks-container">
+    <div
+      class="board-list"
+      cdkDropListGroup
+      cdkDropList
+      cdkDropListOrientation="horizontal"
+      (cdkDropListDropped)="onBoardDropped($event)"
+      [cdkDropListData]="boards"
+    >
+      <ng-container *ngFor="let board of boards; let i = index">
+        <div class="board-item" cdkDrag>
+          <div class="header" cdkDragHandle>
+            <div class="left-item">
+              <h4>{{ board.name }}</h4>
+              <div class="badge rounded-pill bg-white text-dark border">
+                {{ board.count }}
+              </div>
+            </div>
+            <div class="right-item">
+              <mat-icon class="cursor-hand" cdkDragHandle>drag_indicator</mat-icon>
+              <mat-icon
+                mat-icon-button
+                [matMenuTriggerFor]="menu"
+                class="cursor-pointer"
+                >more_vert</mat-icon
+              >
+            </div>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>delete</mat-icon>
+                <span>Delete</span>
+              </button>
+              <hr class="m-0" />
+              <button mat-menu-item>
+                <mat-icon>add</mat-icon>
+                <span>Add Board</span>
+              </button>
+            </mat-menu>
+          </div>
+          <button class="btn btn-outline-primary w-100 bg-white border-color">
+            <mat-icon>add</mat-icon>
+            Add New Task
+          </button>
+          <div
+            class="board-item-card-list"
+            cdkDropList
+            [cdkDropListData]="board.tasks"
+            (cdkDropListDropped)="onTaskDropped($event, i)"
+          >
+            <div
+              class="task-item"
+              [id]="'board-' + i"
+              *ngFor="let task of board.tasks; trackby task;"
+              cdkDrag
+            >
+              <app-task-item></app-task-item>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

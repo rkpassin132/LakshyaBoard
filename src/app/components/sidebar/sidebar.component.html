@@ -1,0 +1,38 @@
+<div class="sidebar-content" [ngClass]="{'withoutDrawer': !isDrawer}">
+    <!-- Toggle Button -->
+    <div class="logo-items">
+        <img src="/assets/logo.png" (click)="toggle()" class="logo-btn cursor-pointer" alt="" loading="lazy" />
+        <span *ngIf="isDrawer">LakshyaBoard</span>
+    </div>
+    
+
+    <!-- Menu Content -->
+    <div class="menu-items mt-5" routerLink="/user/dashboard" routerLinkActive="active">
+        <mat-icon>grid_view</mat-icon>
+        <span *ngIf="isDrawer">Dashboard</span>
+    </div>
+    <div class="menu-items" routerLink="/user/projects" routerLinkActive="active">
+        <mat-icon>dashboard_outline</mat-icon>
+        <span *ngIf="isDrawer">Projects</span>
+    </div>
+    <div class="menu-items">
+        <mat-icon>calendar_month</mat-icon>
+        <span *ngIf="isDrawer">Calender</span>
+    </div>
+    <div class="menu-items">
+        <mat-icon>chat</mat-icon>
+        <span *ngIf="isDrawer">Chat</span>
+    </div>
+    <div class="menu-items">
+        <mat-icon>help</mat-icon>
+        <span *ngIf="isDrawer">Help</span>
+    </div>
+    <div class="menu-items">
+        <mat-icon>settings</mat-icon>
+        <span *ngIf="isDrawer">Settings</span>
+    </div>
+    <div class="menu-items last-menu">
+        <mat-icon>logout</mat-icon>
+        <span *ngIf="isDrawer">Logout</span>
+    </div>
+</div>

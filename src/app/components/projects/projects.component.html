@@ -1,0 +1,29 @@
+<section class="project-container">
+    <div class="side-list-container">
+        <div class="side-list">
+            <h3>Projcts</h3>
+            <div class="project-list">
+                <app-project-item [active]="true"></app-project-item>
+                <app-project-item [active]="false"></app-project-item>
+                <app-project-item [active]="false"></app-project-item>
+                <app-project-item [active]="false"></app-project-item>
+            </div>
+    
+            <h3 class="mt-5">Team member</h3>
+            <div class="team-list">
+                <app-team-item></app-team-item>
+                <app-team-item></app-team-item>
+                <app-team-item></app-team-item>
+                <app-team-item></app-team-item>
+                <app-team-item></app-team-item>
+            </div>
+        </div>
+        <div class="side-list-footer mt-5">
+            <button extended>
+                <mat-icon>add</mat-icon>
+                Add Project
+            </button>
+        </div>
+    </div>
+    <app-project-dashboard></app-project-dashboard>
+</section>

@@ -1,0 +1,56 @@
+@import '../../../../variables';
+
+.project-item-container.active {
+    background: #365eff;
+    .project-logo{
+        mat-icon{
+            background-color: white;
+        }
+    }
+    h4{
+        color: white;
+    }
+    .right-item{
+        mat-icon{
+            color: white;
+        }
+    }
+}
+.project-item-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid $border;
+    margin: 10px 0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    
+    &:hover{
+        border-color: $border_hover;
+    }
+
+    .left-item, .right-item{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .project-logo{
+        mat-icon{
+            font-size: 14px;    
+            font-size: 15px;
+            padding: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #d4d4ff;
+        }
+    }
+}
